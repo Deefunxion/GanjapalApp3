@@ -1,9 +1,9 @@
 // Plant data types and interfaces
 export const ZONE_TYPES = {
-  MEGALOS_TRAY: 'megalos-tray',
-  ZARDINIERA: 'zardiniera', 
-  MIKROS_TRAY: 'mikros-tray',
-  MEGALA_GLASTRAKLA: 'megala-glastrakla'
+  BIG_TRAY: 'BIG_TRAY',
+  JARDINE: 'JARDINE',
+  SMALL_TRAY: 'SMALL_TRAY',
+  ROUND_POT: 'ROUND_POT'
 };
 
 export const TRAINING_METHODS = {
@@ -26,7 +26,7 @@ export const samplePlants = [
     id: '1',
     strainNumber: 1,
     strainType: 'Super Silver Haze xa',
-    zone: ZONE_TYPES.MEGALOS_TRAY,
+    zone: ZONE_TYPES.BIG_TRAY,
     position: { x: 0, y: 0 },
     leafStatus: 0.8,
     internodesNumber: 0.9,
@@ -53,7 +53,7 @@ export const samplePlants = [
     id: '2',
     strainNumber: 2,
     strainType: 'MirMix or Sher',
-    zone: ZONE_TYPES.MEGALOS_TRAY,
+    zone: ZONE_TYPES.BIG_TRAY,
     position: { x: 1, y: 0 },
     leafStatus: 0.7,
     internodesNumber: 0.9,
@@ -80,7 +80,7 @@ export const samplePlants = [
     id: '3',
     strainNumber: 3,
     strainType: 'Mirko Nice #2',
-    zone: ZONE_TYPES.MEGALA_GLASTRAKLA,
+    zone: ZONE_TYPES.ROUND_POT,
     position: { x: 1, y: 0 },
     leafStatus: 0.8,
     internodesNumber: 0.8,
@@ -107,7 +107,7 @@ export const samplePlants = [
     id: '13',
     strainNumber: 13,
     strainType: 'OTI Rs',
-    zone: ZONE_TYPES.MEGALOS_TRAY,
+    zone: ZONE_TYPES.BIG_TRAY,
     position: { x: 0, y: 1 },
     leafStatus: 0.9,
     internodesNumber: 0.8,
@@ -134,7 +134,7 @@ export const samplePlants = [
     id: '16',
     strainNumber: 16,
     strainType: 'Money Maker Xb Rs',
-    zone: ZONE_TYPES.ZARDINIERA,
+    zone: ZONE_TYPES.JARDINE,
     position: { x: 0, y: 0 },
     leafStatus: 0.8,
     internodesNumber: 0.8,
@@ -161,7 +161,7 @@ export const samplePlants = [
     id: '25',
     strainNumber: 25,
     strainType: 'OTI xb',
-    zone: ZONE_TYPES.MIKROS_TRAY,
+    zone: ZONE_TYPES.SMALL_TRAY,
     position: { x: 0, y: 0 },
     leafStatus: 0.8,
     internodesNumber: 0.85,
@@ -188,33 +188,33 @@ export const samplePlants = [
 
 // Zone configurations matching user's hand-drawn layout
 export const zoneConfigs = {
-  [ZONE_TYPES.MEGALOS_TRAY]: {
-    name: 'Μεγάλο Tray',
+  [ZONE_TYPES.BIG_TRAY]: {
+    name: 'Big Tray',
     layout: 'grid',
     gridSize: { rows: 2, cols: 5 },
     capacity: 10,
-    color: 'zone-megalos'
+    color: 'zone-big-tray'
   },
-  [ZONE_TYPES.ZARDINIERA]: {
-    name: 'Ζαρντινιέρα',
+  [ZONE_TYPES.JARDINE]: {
+    name: 'Jardine',
     layout: 'planter',
     gridSize: { rows: 3, cols: 4 },
     rowLayout: [4, 3, 4],
     capacity: 11,
-    color: 'zone-zardiniera'
+    color: 'zone-jardine'
   },
-  [ZONE_TYPES.MIKROS_TRAY]: {
-    name: 'Μικρό Tray',
+  [ZONE_TYPES.SMALL_TRAY]: {
+    name: 'Small Tray',
     layout: 'grid',
     gridSize: { rows: 2, cols: 3 },
     capacity: 6,
-    color: 'zone-mikros'
+    color: 'zone-small-tray'
   },
-  [ZONE_TYPES.MEGALA_GLASTRAKLA]: {
-    name: 'Μεγάλα Γλαστράκια',
+  [ZONE_TYPES.ROUND_POT]: {
+    name: 'Round Pot',
     layout: 'large-round',
     capacity: 7,
-    color: 'zone-megala'
+    color: 'zone-round-pot'
   }
 };
 

@@ -126,7 +126,7 @@ const ImportPreview = ({ data, onConfirm, onCancel, onTrayAllocationChange }) =>
                     const config = TrayAllocator.TRAY_CONFIGS[trayType];
                     const isOverCapacity = count > config.capacity;
                     return (
-                      <div key={trayType} className={`p-3 border rounded ${isOverCapacity ? 'border-red-300 bg-red-50' : 'border-green-300 bg-green-50'}`}>
+                      <div key={trayType} className={`p-3 border rounded ${isOverCapacity ? 'border-red-300' : 'border-green-300 bg-green-50'}`}>
                         <div className="font-medium">{trayType}</div>
                         <div className={`text-sm ${isOverCapacity ? 'text-red-600' : 'text-green-600'}`}>
                           {count}/{config.capacity} plants
@@ -606,7 +606,7 @@ const DataManagement = () => {
 function validatePlantDefaults(plant) {
   // Ensure zone is valid
   if (!Object.values(ZONE_TYPES).includes(plant.zone)) {
-    plant.zone = ZONE_TYPES.MEGALOS_TRAY;
+    plant.zone = ZONE_TYPES.BIG_TRAY;
   }
   // Ensure numeric fields
   plant.totalMediumValue = typeof plant.totalMediumValue === 'number' ? plant.totalMediumValue : 0.5;

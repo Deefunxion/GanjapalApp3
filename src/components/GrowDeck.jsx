@@ -75,7 +75,7 @@ const AddPlantDialog = ({ onAddPlant, isOpen, onClose }) => {
   const [newPlant, setNewPlant] = useState({
     strainNumber: '',
     strainType: '',
-    zone: ZONE_TYPES.MEGALOS_TRAY
+    zone: ZONE_TYPES.BIG_TRAY
   });
 
   const handleSubmit = (e) => {
@@ -111,7 +111,7 @@ const AddPlantDialog = ({ onAddPlant, isOpen, onClose }) => {
     };
 
     onAddPlant(plant);
-    setNewPlant({ strainNumber: '', strainType: '', zone: ZONE_TYPES.MEGALOS_TRAY });
+    setNewPlant({ strainNumber: '', strainType: '', zone: ZONE_TYPES.BIG_TRAY });
     onClose();
   };
 
@@ -514,10 +514,10 @@ const GrowDeck = () => {
       <Tabs value={activeZone} onValueChange={setActiveZone}>
         <TabsList className="grid w-full grid-cols-5">
           <TabsTrigger value="all">All Zones</TabsTrigger>
-          <TabsTrigger value={ZONE_TYPES.MEGALOS_TRAY}>Μεγάλο</TabsTrigger>
-          <TabsTrigger value={ZONE_TYPES.ZARDINIERA}>Ζαρντινιέρα</TabsTrigger>
-          <TabsTrigger value={ZONE_TYPES.MIKROS_TRAY}>Μικρό</TabsTrigger>
-          <TabsTrigger value={ZONE_TYPES.MEGALA_GLASTRAKLA}>Γλαστράκια</TabsTrigger>
+          <TabsTrigger value={ZONE_TYPES.BIG_TRAY}>Big Tray</TabsTrigger>
+          <TabsTrigger value={ZONE_TYPES.JARDINE}>Jardine</TabsTrigger>
+          <TabsTrigger value={ZONE_TYPES.SMALL_TRAY}>Small Tray</TabsTrigger>
+          <TabsTrigger value={ZONE_TYPES.ROUND_POT}>Round Pot</TabsTrigger>
         </TabsList>
       </Tabs>
 

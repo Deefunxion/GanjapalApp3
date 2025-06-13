@@ -1,22 +1,22 @@
 // Tray allocation logic for spreadsheet import
 export class TrayAllocator {
   static TRAY_CONFIGS = {
-    'Large': {
-      zoneType: 'megalos-tray',
+    'Big Tray': {
+      zoneType: 'BIG_TRAY',
       layout: 'grid',
       dimensions: { rows: 2, cols: 5 },
       capacity: 10,
       positions: []
     },
-    'Small': {
-      zoneType: 'mikros-tray', 
+    'Small Tray': {
+      zoneType: 'SMALL_TRAY', 
       layout: 'grid',
       dimensions: { rows: 2, cols: 3 },
       capacity: 6,
       positions: []
     },
-    'Round': {
-      zoneType: 'megala-glastrakla',
+    'Round Pot': {
+      zoneType: 'ROUND_POT',
       layout: 'circular',
       capacity: 7,
       positions: [
@@ -29,8 +29,8 @@ export class TrayAllocator {
         { x: 6, y: 0, label: 'perimeter' }
       ]
     },
-    'Planter': {
-      zoneType: 'zardiniera',
+    'Jardine': {
+      zoneType: 'JARDINE',
       layout: 'planter',
       dimensions: { rows: 3, cols: 7 },
       capacity: 17, // 7 + 3 + 7 (top row + middle 3 + bottom row)
@@ -40,23 +40,23 @@ export class TrayAllocator {
 
   static initializePositions() {
     // Initialize Large Tray positions (2x5 grid)
-    this.TRAY_CONFIGS.Large.positions = [];
+    this.TRAY_CONFIGS['Big Tray'].positions = [];
     for (let row = 0; row < 2; row++) {
       for (let col = 0; col < 5; col++) {
-        this.TRAY_CONFIGS.Large.positions.push({ x: col, y: row });
+        this.TRAY_CONFIGS['Big Tray'].positions.push({ x: col, y: row });
       }
     }
 
     // Initialize Small Tray positions (2x3 grid)
-    this.TRAY_CONFIGS.Small.positions = [];
+    this.TRAY_CONFIGS['Small Tray'].positions = [];
     for (let row = 0; row < 2; row++) {
       for (let col = 0; col < 3; col++) {
-        this.TRAY_CONFIGS.Small.positions.push({ x: col, y: row });
+        this.TRAY_CONFIGS['Small Tray'].positions.push({ x: col, y: row });
       }
     }
 
-    // Initialize Planter (ZARDINIERA) positions (4-3-4 layout)
-    this.TRAY_CONFIGS.Planter.positions = [
+    // Initialize Jardine (ZARDINIERA) positions (4-3-4 layout)
+    this.TRAY_CONFIGS.Jardine.positions = [
       // Top row (y=0): 4 slots
       { x: 0, y: 0 }, { x: 1, y: 0 }, { x: 2, y: 0 }, { x: 3, y: 0 },
       // Middle row (y=1): 3 slots (centered at x=0,1,2)
